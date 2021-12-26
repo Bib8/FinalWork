@@ -61,18 +61,18 @@ public class Employee {
     public static void minSalary(Employee[] employees) {
         int bufMinId = 0;
         for (int i = 0; i < employees.length; i++) {
-            for (int j = i + 1; j < employees.length; j++) {
-                if (employees[j].salary < employees[bufMinId].salary) bufMinId = j;
-            }
+
+                if (employees[i].salary < employees[bufMinId].salary) bufMinId = i;
+
         }
         System.out.println(employees[bufMinId]);
     }
     public static void maxSalary(Employee[] employees) {
         int bufMaxId = 0;
         for (int i = 0; i < employees.length; i++) {
-            for (int j = i + 1; j < employees.length; j++) {
+
                 if (employees[i].salary > employees[bufMaxId].salary) bufMaxId = i;
-            }
+
         }
         System.out.println(employees[bufMaxId]);
     }
